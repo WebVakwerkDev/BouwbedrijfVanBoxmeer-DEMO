@@ -17,6 +17,7 @@ export default {
         display: ['Playfair Display', 'serif'],
         serif: ['Cormorant Garamond', 'serif'],
         sans: ['Outfit', 'sans-serif'],
+        brand: ['Oswald', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -53,12 +54,12 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         cream: "hsl(var(--cream))",
+        "cream-dark": "hsl(var(--cream-dark))",
         brick: "hsl(var(--brick))",
         "brick-dark": "hsl(var(--brick-dark))",
         charcoal: "hsl(var(--charcoal))",
-        gold: "hsl(var(--gold))",
-        "gold-dark": "hsl(var(--gold-dark))",
-        "gold-light": "hsl(var(--gold-light))",
+        "charcoal-light": "hsl(var(--charcoal-light))",
+        "warm-white": "hsl(var(--warm-white))",
       },
       borderRadius: {
         lg: "var(--radius)",
