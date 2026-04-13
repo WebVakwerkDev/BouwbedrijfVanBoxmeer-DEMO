@@ -73,9 +73,9 @@ const Ticker = () => {
     <div className="overflow-hidden border-y border-border py-5 bg-cream-dark/50">
       <div className="ticker-track flex whitespace-nowrap">
         {doubled.map((word, i) => (
-          <span key={i} className="mx-10 label-caps text-muted-foreground/50">
+          <span key={i} className="mx-10 label-caps text-muted-foreground/80">
             {word}
-            <span className="ml-10 inline-block w-1.5 h-1.5 bg-brick/40 rotate-45" />
+            <span className="ml-10 inline-block w-1.5 h-1.5 bg-brick/60 rotate-45" />
           </span>
         ))}
       </div>
@@ -141,7 +141,7 @@ const Index = () => {
               <div className={`font-brand italic font-bold text-xl tracking-wide leading-none transition-colors ${navScrolled ? "text-charcoal" : "text-white"}`}>
                 VAN BOXMEER
               </div>
-              <div className={`text-[0.5rem] font-sans font-medium tracking-[0.25em] uppercase mt-0.5 transition-colors ${navScrolled ? "text-muted-foreground" : "text-white/60"}`}>
+              <div className={`text-[0.5rem] font-sans font-medium tracking-[0.25em] uppercase mt-0.5 transition-colors ${navScrolled ? "text-muted-foreground" : "text-white/80"}`}>
                 Bouwbedrijf · Veghel
               </div>
             </div>
@@ -158,7 +158,7 @@ const Index = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className={`nav-link label-caps transition-colors ${navScrolled ? "text-muted-foreground hover:text-brick" : "text-white/70 hover:text-white"}`}
+                className={`nav-link label-caps transition-colors ${navScrolled ? "text-muted-foreground hover:text-brick" : "text-white/85 hover:text-white"}`}
               >
                 {item.label}
               </a>
@@ -166,7 +166,7 @@ const Index = () => {
           </div>
 
           <div className="flex items-center gap-5">
-            <a href="tel:0413363479" className={`hidden md:flex items-center gap-2 label-caps transition-colors ${navScrolled ? "text-brick" : "text-white/80"}`}>
+            <a href="tel:0413363479" className={`hidden md:flex items-center gap-2 label-caps transition-colors ${navScrolled ? "text-brick" : "text-white/90"}`}>
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
@@ -209,8 +209,8 @@ const Index = () => {
 
         <div className="relative z-10 px-6 md:px-12 lg:px-20 pb-20 pt-32">
           <div className="reveal">
-            <div className="label-caps text-white/60 mb-6 flex items-center gap-3">
-              <span className="w-10 h-px bg-white/40" />
+            <div className="label-caps text-white/80 mb-6 flex items-center gap-3">
+              <span className="w-10 h-px bg-white/60" />
               Al meer dan 100 jaar
             </div>
           </div>
@@ -221,7 +221,7 @@ const Index = () => {
           </h1>
 
           <div className="mt-12 flex flex-col md:flex-row md:items-end gap-10 reveal stagger-2">
-            <p className="max-w-lg body-elegant text-white/75">
+            <p className="max-w-lg body-elegant text-white/85">
               Bouwbedrijf Van Boxmeer is een allround bouwbedrijf. Al meer dan een eeuw lang.
               Met onze persoonlijke aanpak werken wij dagelijks aan gevarieerde bouwprojecten
               in Noord-Brabant.
@@ -245,7 +245,7 @@ const Index = () => {
             />
             <div>
               <div className="text-xs font-sans font-semibold text-white tracking-wide">Bij Koninklijke Beschikking</div>
-              <div className="text-[0.6rem] font-sans text-white/60 tracking-wider">Hofleverancier sinds 2022</div>
+              <div className="text-[0.6rem] font-sans text-white/80 tracking-wider">Hofleverancier sinds 2022</div>
             </div>
           </div>
         </div>
@@ -274,7 +274,7 @@ const Index = () => {
                 <div className="display-large text-charcoal">
                   {stat.animated ? <AnimatedCounter end={stat.end} suffix={stat.suffix} /> : stat.value}
                 </div>
-                <div className="mt-2 label-caps text-brick/70">{stat.label}</div>
+                <div className="mt-2 label-caps text-brick">{stat.label}</div>
                 <p className="mt-2 text-sm font-sans text-muted-foreground">{stat.desc}</p>
               </div>
             </div>
@@ -329,7 +329,7 @@ const Index = () => {
                 { value: "Ontzorging", icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" },
               ].map((item) => (
                 <div key={item.value} className="flex items-center gap-3">
-                  <svg className="w-5 h-5 text-brick/60 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <svg className="w-5 h-5 text-brick flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
                   </svg>
                   <span className="text-sm font-sans font-medium text-charcoal">{item.value}</span>
@@ -418,9 +418,9 @@ const Index = () => {
             bouwen met <span className="hero-accent">vakmanschap.</span>
           </blockquote>
           <div className="mt-10 flex items-center justify-center gap-4">
-            <span className="w-12 h-px bg-white/20" />
-            <span className="label-caps text-white/40">Bouwbedrijf Van Boxmeer</span>
-            <span className="w-12 h-px bg-white/20" />
+            <span className="w-12 h-px bg-white/40" />
+            <span className="label-caps text-white/70">Bouwbedrijf Van Boxmeer</span>
+            <span className="w-12 h-px bg-white/40" />
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brick/30 to-transparent" />
@@ -456,7 +456,7 @@ const Index = () => {
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="font-display text-xl text-white mb-1">{project.title}</h3>
-                  <div className="flex items-center gap-2 text-white/60">
+                  <div className="flex items-center gap-2 text-white/80">
                     <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -576,8 +576,8 @@ const Index = () => {
       <section className="py-20 px-6 md:px-12 lg:px-20 border-y border-border bg-white">
         <div className="reveal max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <div className="label-caps text-muted-foreground/60 mb-2">Gecertificeerd & Erkend</div>
-            <p className="text-sm font-sans text-muted-foreground/40">Kwaliteit waar u op kunt vertrouwen</p>
+            <div className="label-caps text-muted-foreground mb-2">Gecertificeerd & Erkend</div>
+            <p className="text-sm font-sans text-muted-foreground">Kwaliteit waar u op kunt vertrouwen</p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16">
             <img src="/images/cert-bouwgarant.png" alt="Bouwgarant" className="cert-logo" />
@@ -598,11 +598,11 @@ const Index = () => {
         </div>
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brick/30 to-transparent" />
         <div className="reveal relative z-10 max-w-4xl mx-auto text-center">
-          <div className="label-caps text-white/40 mb-6">(Ver)bouwplannen?</div>
+          <div className="label-caps text-white/70 mb-6">(Ver)bouwplannen?</div>
           <h2 className="display-large text-white mb-6">
             Klaar om te <span className="italic hero-accent">bouwen</span>?
           </h2>
-          <p className="body-elegant text-white/70 max-w-xl mx-auto mb-10">
+          <p className="body-elegant text-white/85 max-w-xl mx-auto mb-10">
             Overweegt u een nieuwbouwproject, verbouwing of renovatie? Het liefst
             denken wij in een vroeg stadium met u mee. Neem vrijblijvend contact op.
             Meer dan 100 jaar ervaring staat voor u klaar.
@@ -639,26 +639,26 @@ const Index = () => {
 
             <div className="space-y-8">
               <div className="group">
-                <div className="label-caps text-muted-foreground/60 mb-2">Adres</div>
+                <div className="label-caps text-muted-foreground mb-2">Adres</div>
                 <div className="font-sans text-lg text-charcoal leading-relaxed">
                   Pastoor Clercxstraat 45<br />5465 RE Veghel, Noord-Brabant
                 </div>
               </div>
               <div className="group">
-                <div className="label-caps text-muted-foreground/60 mb-2">Telefoon</div>
+                <div className="label-caps text-muted-foreground mb-2">Telefoon</div>
                 <a href="tel:0413363479" className="font-display text-2xl md:text-3xl text-brick hover:text-brick-dark transition-colors">
                   (0413) 36 34 79
                 </a>
               </div>
               <div className="group">
-                <div className="label-caps text-muted-foreground/60 mb-2">E-mail</div>
+                <div className="label-caps text-muted-foreground mb-2">E-mail</div>
                 <a href="mailto:info@bouwbedrijfvanboxmeer.nl"
                   className="font-sans text-lg text-charcoal underline underline-offset-4 decoration-brick/30 hover:decoration-brick transition-all">
                   info@bouwbedrijfvanboxmeer.nl
                 </a>
               </div>
               <div>
-                <div className="label-caps text-muted-foreground/60 mb-3">Volg ons</div>
+                <div className="label-caps text-muted-foreground mb-3">Volg ons</div>
                 <div className="flex gap-3">
                   <a href="https://www.facebook.com/bouwbedrijfvanboxmeer" target="_blank" rel="noopener noreferrer"
                     className="w-10 h-10 flex items-center justify-center border border-border hover:border-brick hover:bg-brick/5 transition-all duration-300">
@@ -692,7 +692,7 @@ const Index = () => {
               ) : (
                 <form onSubmit={handleFormSubmit} className="space-y-5">
                   <div>
-                    <label className="label-caps text-muted-foreground/70 mb-2 block text-[0.6rem]">Naam *</label>
+                    <label className="label-caps text-muted-foreground mb-2 block text-[0.6rem]">Naam *</label>
                     <input
                       type="text"
                       required
@@ -704,7 +704,7 @@ const Index = () => {
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                      <label className="label-caps text-muted-foreground/70 mb-2 block text-[0.6rem]">E-mail *</label>
+                      <label className="label-caps text-muted-foreground mb-2 block text-[0.6rem]">E-mail *</label>
                       <input
                         type="email"
                         required
@@ -715,7 +715,7 @@ const Index = () => {
                       />
                     </div>
                     <div>
-                      <label className="label-caps text-muted-foreground/70 mb-2 block text-[0.6rem]">Telefoon</label>
+                      <label className="label-caps text-muted-foreground mb-2 block text-[0.6rem]">Telefoon</label>
                       <input
                         type="tel"
                         value={formData.telefoon}
@@ -726,7 +726,7 @@ const Index = () => {
                     </div>
                   </div>
                   <div>
-                    <label className="label-caps text-muted-foreground/70 mb-2 block text-[0.6rem]">Bericht *</label>
+                    <label className="label-caps text-muted-foreground mb-2 block text-[0.6rem]">Bericht *</label>
                     <textarea
                       required
                       rows={5}
@@ -777,39 +777,39 @@ const Index = () => {
                 <img src="/images/logo.png" alt="Bouwbedrijf Van Boxmeer" className="h-9 w-auto rounded-sm" />
                 <div>
                   <div className="font-brand italic font-bold text-white text-lg tracking-wide">VAN BOXMEER</div>
-                  <div className="text-[0.5rem] font-sans text-white/40 tracking-[0.15em] uppercase">Koninklijk Hofleverancier</div>
+                  <div className="text-[0.5rem] font-sans text-white/70 tracking-[0.15em] uppercase">Koninklijk Hofleverancier</div>
                 </div>
               </div>
-              <p className="text-sm font-sans text-white/40 leading-relaxed">
+              <p className="text-sm font-sans text-white/70 leading-relaxed">
                 Al meer dan een eeuw uw allround bouwbedrijf in het hart van Noord-Brabant.
               </p>
             </div>
 
             {/* Navigation */}
             <div>
-              <div className="label-caps text-white/30 mb-5 text-[0.6rem]">Navigatie</div>
+              <div className="label-caps text-white/60 mb-5 text-[0.6rem]">Navigatie</div>
               <div className="space-y-3">
                 {["Over ons", "Diensten", "Projecten", "Werkwijze", "Contact"].map((item) => (
                   <a key={item} href={`#${item.toLowerCase().replace(" ", "-")}`}
-                    className="block text-sm font-sans text-white/50 hover:text-white transition-colors">{item}</a>
+                    className="block text-sm font-sans text-white/70 hover:text-white transition-colors">{item}</a>
                 ))}
               </div>
             </div>
 
             {/* Services */}
             <div>
-              <div className="label-caps text-white/30 mb-5 text-[0.6rem]">Diensten</div>
+              <div className="label-caps text-white/60 mb-5 text-[0.6rem]">Diensten</div>
               <div className="space-y-3">
                 {["Nieuwbouw Particulier", "Bedrijfsmatige Bouw", "Verbouwen & Renovatie", "Verduurzaming"].map((item) => (
-                  <span key={item} className="block text-sm font-sans text-white/50">{item}</span>
+                  <span key={item} className="block text-sm font-sans text-white/70">{item}</span>
                 ))}
               </div>
             </div>
 
             {/* Contact */}
             <div>
-              <div className="label-caps text-white/30 mb-5 text-[0.6rem]">Contact</div>
-              <div className="space-y-3 text-sm font-sans text-white/50">
+              <div className="label-caps text-white/60 mb-5 text-[0.6rem]">Contact</div>
+              <div className="space-y-3 text-sm font-sans text-white/70">
                 <div>Pastoor Clercxstraat 45<br />5465 RE Veghel</div>
                 <a href="tel:0413363479" className="block hover:text-white transition-colors">(0413) 36 34 79</a>
                 <a href="mailto:info@bouwbedrijfvanboxmeer.nl" className="block hover:text-white transition-colors">info@bouwbedrijfvanboxmeer.nl</a>
@@ -818,14 +818,14 @@ const Index = () => {
           </div>
 
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="text-[0.6rem] font-sans text-white/25 tracking-[0.1em]">
+            <div className="text-[0.6rem] font-sans text-white/60 tracking-[0.1em]">
               &copy; {new Date().getFullYear()} Bouwbedrijf Van Boxmeer. Alle rechten voorbehouden.
             </div>
             <div className="flex gap-6">
               <a href="https://www.facebook.com/bouwbedrijfvanboxmeer" target="_blank" rel="noopener noreferrer"
-                className="text-xs font-sans text-white/25 hover:text-white/60 transition-colors">Facebook</a>
+                className="text-xs font-sans text-white/60 hover:text-white transition-colors">Facebook</a>
               <a href="https://www.instagram.com/bouwbedrijfvanboxmeer/" target="_blank" rel="noopener noreferrer"
-                className="text-xs font-sans text-white/25 hover:text-white/60 transition-colors">Instagram</a>
+                className="text-xs font-sans text-white/60 hover:text-white transition-colors">Instagram</a>
             </div>
           </div>
         </div>
